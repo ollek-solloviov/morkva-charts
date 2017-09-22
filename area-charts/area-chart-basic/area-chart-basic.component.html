@@ -1,0 +1,81 @@
+<div
+  #container
+  mcContainer
+  [responsive]="responsive"
+  [container_height]="container_height"
+  [container_width]="container_width">
+  <svg
+    #svg
+    mcSvg
+    [type]="type"
+    [container]="container">
+    <desc
+      mcXAxisBasic mcYAxisBasic
+      [data]="data"
+      [container]="container"
+      [g]="g"
+      [margin]="margin"
+      [x_scale]="x_scale"
+      [data_type]="data_type"
+      [time_type]="time_type"
+      [show_x_axis]="show_x_axis"
+      [remove_domain]="remove_domain"
+      [x_axis_params]="x_axis_params"
+      [x_tick_size]="x_tick_size"
+      [y_scale]="y_scale"
+      [show_y_axis]="show_y_axis"
+      [enable_negative_values]="enable_negative_values"
+      [nice_y_scale]="nice_y_scale"
+      [nice_step]="nice_step"
+      [y_axis_params]="y_axis_params"
+      [y_tick_size]="y_tick_size"
+      [use_animation]="use_animation"
+      [transition]="transition">
+    </desc>
+    <desc
+      mcArea
+      [use_hash_location]="use_hash_location"
+      [data]="data"
+      [container]="container"
+      [g]="g"
+      [margin]="margin"
+      [x_scale]="x_scale"
+      [y_scale]="y_scale"
+      [area_type]="area_type"
+      [area_opacity]="area_opacity"
+      [color_theme]="color_theme"
+      [use_gradient]="use_gradient"
+      [gradient_theme]="gradient_theme"
+      [use_shadow]="use_shadow"
+      [use_animation]="use_animation"
+      [transition]="transition">
+    </desc>
+    <desc *ngIf="use_gradient"
+          mcGradient
+          [g]="g"
+          [gradient_theme]="gradient_theme">
+    </desc>
+    <desc *ngIf="use_shadow"
+          mcShadow
+          [g]="g">
+    </desc>
+    <desc *ngIf="use_tooltip"
+          mcTooltip
+          [data]="data"
+          [g]="g"
+          [container]="container"
+          [margin]="margin"
+          [y_scale]="y_scale"
+          [x_scale]="x_scale"
+          [color_palette]="color_theme"
+    ></desc>
+    <desc *ngIf="use_legend"
+          mcLegend
+          [margin]="margin"
+          [container]="container"
+          [g]="g"
+          [data]="data"
+          [color_scheme]="color_theme"
+    ></desc>
+  </svg>
+</div>

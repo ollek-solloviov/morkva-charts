@@ -1,0 +1,44 @@
+<div
+  #container
+  mcContainer
+  [responsive]="responsive"
+  [container_height]="container_height"
+  [container_width]="container_width">
+  <svg version="1.1"
+    #svg
+    mcSvg
+    [type]="type"
+    [container]="container">
+    <desc
+      mcPie
+      [use_hash_location]="use_hash_location"
+      [data]="data"
+      [container]="container"
+      [g]="g"
+      [margin]="margin"
+      [color_theme]="color_theme"
+      [pie_fill]="pie_fill"
+      [pie_stroke]="pie_stroke"
+      [pie_stroke_width]="pie_stroke_width"
+      [pie_opacity]="pie_opacity"
+      [doughnut]="doughnut"
+      [corner_radius]="corner_radius"
+      [pad_angle]="pad_angle"
+      [inner_radius]="inner_radius"
+      [use_gradient]="use_gradient"
+      [gradient_theme]="gradient_theme"
+      [use_shadow]="use_shadow"
+      [use_animation]="use_animation"
+      [transition]="transition"
+    ></desc>
+    <desc *ngIf="use_gradient"
+          mcLinearGradient
+          [g]="g"
+          [gradient_theme]="gradient_theme">
+    </desc>
+    <desc *ngIf="use_shadow"
+          mcShadow
+          [g]="g">
+    </desc>
+  </svg>
+</div>
